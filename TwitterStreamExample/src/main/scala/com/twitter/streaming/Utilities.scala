@@ -1,8 +1,6 @@
 package com.twitter.streaming
 
-import org.apache.log4j.Level
 import java.util.regex.Pattern
-import java.util.regex.Matcher
 
 object Utilities {
   /** Makes sure only ERROR messages get logged to avoid log spam. */
