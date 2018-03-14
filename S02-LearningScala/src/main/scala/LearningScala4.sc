@@ -105,6 +105,10 @@ println(archersShip)                              //> Unknown
 // modula operator, like other languages, is %, which gives you the remainder after division. For example, 9 % 3 = 0
 // because 9 is evenly divisible by 3.) Do this first by iterating through all the items in the list and testing each
 // one as you go. Then, do it again by using a filter function on the list instead.
+val first20: List[Int] = (1 until 20).toList
+  val multiplesOf3 = first20.filter(x => x%3==0)
+  multiplesOf3.mkString(",")
+
 
 // That's enough for now!
 // There is MUCH more to learn about Scala. We didn't cover many other collection types, including mutable collections.
