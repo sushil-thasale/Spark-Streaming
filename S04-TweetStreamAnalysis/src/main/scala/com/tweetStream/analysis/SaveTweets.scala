@@ -45,7 +45,7 @@ object SaveTweets {
         // Combine each partition's results into a single RDD:
         val repartitionedRDD = rdd.repartition(1).cache()
         // And print out a directory with the results.
-        repartitionedRDD.saveAsTextFile("Tweets_" + time.milliseconds.toString)
+        repartitionedRDD.saveAsTextFile("tweet-collection/Tweets_" + time.milliseconds.toString)
         // Stop once we've collected 1000 tweets.
         totalTweets += repartitionedRDD.count()
         println("Tweet count: " + totalTweets)
@@ -58,7 +58,7 @@ object SaveTweets {
     // You can also write results into a database of your choosing, but we'll do that later.
     
     // Set a checkpoint directory, and kick it all off
-    ssc.checkpoint("/home/sushil/study/working-with-spark/Spark-Streaming/S04-TweetStreamAnalysis/checkpoint/")
+    ssc.checkpoint("checkpoint/")
     ssc.start()
     ssc.awaitTermination()
   }  
