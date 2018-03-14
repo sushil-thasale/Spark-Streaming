@@ -1,10 +1,10 @@
-name := "SparkStreamingExample-1"
+name := "TwitterStreamExample"
 
 version := "1.0"
 
 scalaVersion := "2.11.8"
 
-val sparkVersion = "2.2.0"
+val sparkVersion = "2.0.1"
 
 resolvers ++= Seq(
   "apache-snapshots" at "http://repository.apache.org/snapshots/"
@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.apache.spark" %% "spark-streaming" % sparkVersion,
-  "org.apache.spark" %% "spark-streaming-twitter" % sparkVersion
+  "org.apache.bahir" %% "spark-streaming-twitter" % "2.0.1"
 )
+        
